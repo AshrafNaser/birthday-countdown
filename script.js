@@ -101,3 +101,9 @@ window.onclick = (event) => {
     document.getElementById("modal").style.display = "none";
   }
 };
+document.addEventListener("click", () => {
+  const ocean = document.getElementById("oceanSound");
+  if (ocean.paused) {
+    ocean.play();
+  }
+});
