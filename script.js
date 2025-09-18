@@ -1,6 +1,6 @@
 const totalDays = 30;
-const targetDate = new Date("2025-10-18"); // 🎂 birthday date
-const today = new Date("2025-10-3");
+const targetDate = new Date(2025, 10, 18); // 🎂 birthday date
+const today = new Date(2025, 10, 3);
 
 // Days until birthday
 const diffTime = targetDate - today;
