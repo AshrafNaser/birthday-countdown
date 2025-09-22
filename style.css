@@ -183,3 +183,12 @@ h1 {
   }
 }
 
+img {
+  max-width: 300px; /* Set your desired maximum width */
+  max-height: 300px; /* Set your desired maximum height */
+  width: auto; /* Ensures the width adjusts proportionally */
+  height: auto; /* Ensures the height adjusts proportionally */
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 10px;
+}
