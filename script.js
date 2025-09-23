@@ -1,22 +1,23 @@
 const totalDays = 30;
-const targetDate = new Date(2025, 10, 18); // 🎂 birthday date
-const today = new Date(2025, 10, 14);
+const targetDate = new Date(2025, 9, 30); // 🎂 birthday date
+const today = new Date(2025, 9, 30);
 
 // Days until birthday
 const diffTime = targetDate - today;
 const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
 
 // Days unlocked (Day 1 starts 30 days before birthday)
-const unlockedDays = totalDays - diffDays + 1;
+const unlockedDays = totalDays - diffDays ;
 
 const countdownEl = document.getElementById("countdown");
 countdownEl.textContent = diffDays > 0 
-  ? `${diffDays} days to 40!` 
+  ? `${diffDays}` 
   : "Happy 40th Birthday! 🎉";
 
 // --- 30 Days Content ---
 const daysContent = [
-  { day: 1, title: "Descent into the Deep", content: "A lone diver slips beneath the waves, her hair floating like dark silk in the golden sunlight.\nThe ocean welcomes her with a soft, whispering current, as if greeting an old friend.\nTiny bubbles trail behind her, sparkling like scattered pearls.\nAbove, shafts of light pierce the deep, revealing the shimmer of unseen creatures.\nShe feels the pulse of the sea, ancient and alive, pulling her forward.", icon: "🦈", image: "imgs/1.JPG" },
+  { day: 1, title: "Descent into the Deep", content: "A lone diver slips beneath the waves, her hair floating like dark silk in the golden sunlight.\nThe ocean welcomes her with a soft, whispering current, as if greeting an old friend.\nTiny bubbles trail behind her, sparkling like scattered pearls.\nAbove, shafts of light pierce the deep, revealing the shimmer of unseen creatures.\nShe feels the pulse of the sea, ancient and alive, pulling her forward.", icon: "🦈", 
+    image: "imgs/1.JPG" },
 
   { day: 2, title: "The Silver Path", content: "A glimmering path of silver fish twists and turns through a coral archway.\nThe stones around her seem carved by hands long forgotten, etched with strange symbols.\nShe reaches out, fingers brushing against the cool surface, feeling the heartbeat of history.\nAbove, a flock of dolphins arcs through the sunbeams, leading her toward the unknown.\nHer heart quickens; every moment feels like stepping into a dream.", icon: "🐋", image: "imgs/2.JPG" },
 
@@ -68,13 +69,20 @@ const daysContent = [
 
   { day: 26, title: "The Sunken City Revealed", content: "Breaking through a curtain of light, she sees a sunken city stretching across the sand.\nTowers of coral and bridges of pearl shimmer with the history of countless generations.\nFish dart through streets, dolphins leap across sunlit plazas, and whales sing in the distance.\nShe drifts over the city, marveling at the beauty and stories preserved beneath the waves.\nThe magic of the ocean surrounds her, both ancient and eternal.", icon: "🦩", image: "imgs/26.JPG" },
 
-  { day: 27, title: "The Majestic Palace", content: "A palace rises from the heart of the city, more magnificent than anything she has seen.\nIts towers glow softly, adorned with gemstones that catch the light in endless rainbows.\nMystical creatures glide past, guiding her to the central hall.\nShe feels her pulse quicken as she approaches, sensing the culmination of her journey.\nThe ocean seems to hold its breath, waiting.", icon: "🐍", image: "imgs/27.JPG" },
+  { day: 27, title: "The Majestic Palace",
+     content: "A palace rises from the heart of the city, more magnificent than anything she has seen.\nIts towers glow softly, adorned with gemstones that catch the light in endless rainbows.\nMystical creatures glide past, guiding her to the central hall.\nShe feels her pulse quicken as she approaches, sensing the culmination of her journey.\nThe ocean seems to hold its breath, waiting.", icon: "🐍",
+      image: "imgs/27.JPG" },
 
-  { day: 28, title: "Hall of Eternal Magic", content: "Inside the hall, the treasures of the kingdom are arranged like a grand mosaic.\nPearls float like stars, artifacts glimmer, and the water hums with magic.\nShe moves carefully, absorbing every detail, every story held in the currents.\nA sense of reverence fills her, as if she has become part of the kingdom herself.\nEvery heartbeat echoes through the palace, connecting her to history and mystery alike.", icon: "🦭", image: "https://upload.wikimedia.org/wikipedia/commons/7/7f/Walrus2.jpg" },
+  { day: 28, title: "Hall of Eternal Magic",
+             content: "Inside the hall, the treasures of the kingdom are arranged like a grand mosaic.\nPearls float like stars, artifacts glimmer, and the water hums with magic.\nShe moves carefully, absorbing every detail, every story held in the currents.\nA sense of reverence fills her, as if she has become part of the kingdom herself.\nEvery heartbeat echoes through the palace, connecting her to history and mystery alike.", icon: "🦭",
+             image: "imgs/28.JPG" },
 
-  { day: 29, title: "The Final Chamber", content: "A final chamber appears, bathed in golden light filtering from the surface.\nAt its center, a treasure chest rests, glowing softly as if alive.\nShe drifts closer, hands trembling with anticipation.\nThe water around her pulses gently, echoing the magic of the ocean.\nShe knows that what lies within will complete her journey.", icon: "🐚", image: "https://upload.wikimedia.org/wikipedia/commons/6/6f/Hermit_crab.jpg" },
+  { day: 29, title: "The Final Chamber", content: "A final chamber appears, bathed in golden light filtering from the surface.\nAt its center, a treasure chest rests, glowing softly as if alive.\nShe drifts closer, hands trembling with anticipation.\nThe water around her pulses gently, echoing the magic of the ocean.\nShe knows that what lies within will complete her journey.", icon: "🐚",
+     image: "imgs/29.JPG" },
 
-  { day: 30, title: "The Birthday Reveal", content: "The chest opens slowly, revealing a radiant pearl and a golden scroll.\nThe scroll unfurls in the water, letters glowing softly, spelling a message of love, adventure, and triumph.\nShe reads it, heart soaring: “Happy Birthday, Leila! May your 40th year be magical and full of adventure.”\nThe pearl rises, casting light across the chamber, illuminating every treasure and every secret.\nThe ocean hums, wrapping her in warmth, magic, and timeless wonder.", icon: "🎂", image: "https://upload.wikimedia.org/wikipedia/commons/2/2d/Birthday_cake.jpg" }
+  { day: 30, title: "The Reveal", 
+    content: "The chest opens slowly, revealing a radiant pearl and a golden scroll.\nThe scroll unfurls in the water, letters glowing softly, spelling a message of love, adventure, and triumph.\nShe reads it, heart soaring: “Happy Birthday, Leila! May your 40th year be magical and full of adventure.”\nThe pearl rises, casting light across the chamber, illuminating every treasure and every secret.\nThe ocean hums, wrapping her in warmth, magic, and timeless wonder.", icon: "🎂", 
+    image: "imgs/30.JPG" }
 ];
 
 
